@@ -15,11 +15,7 @@ export class AdminController {
             let newBlog = new Blog({
                 type: validBody.type,
                 title: validBody.title,
-                body: {
-                    link: validBody.body.link,
-                    code: validBody.body.code,
-                    image: validBody.body.image,
-                }
+                body: validBody.body
             });
             await newBlog.save();
             res.status(200).send(newBlog);
@@ -40,11 +36,7 @@ export class AdminController {
             }
             blog.type = req.body.type || blog.type;
             blog.title = req.body.title || blog.title;
-            if (req.body.body) {
-                blog.body.link = req.body.body.link || blog.body.link;
-                blog.body.code = req.body.body.code || blog.body.code;
-                blog.body.image = req.body.body.image || blog.body.image;
-            }
+            blog.body = req.body.body || blog.body;
             await blog.save();
             res.status(200).send(blog);
             return;
