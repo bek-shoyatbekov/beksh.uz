@@ -1,0 +1,32 @@
+// TODO
+
+// Entities
+Blog
+id  int
+type  article | project
+title string
+body  Body
+
+Body
+id int
+link string
+code string
+image string
+
+
+
+// Admin
+Admin can access by giving params in req.query
+{{url}}/admin?name=bek&&password=SoftSkills_2023
+
+1. Add new Blog
+2. Delete Blog by its id
+3. Edit Blog by its id
+
+
+// User // done
+1. Get All Blogs specifically article or project
+2. Get a Blog by id
+
+
+
