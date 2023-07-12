@@ -2,5 +2,8 @@ export interface BlogInterface {
     id: number;
     type: string;
     title: string;
-    body: string;
+    body: {
+        image: string;
+        text: string;
+    }
 }

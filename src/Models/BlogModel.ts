@@ -5,7 +5,10 @@ import {BlogInterface} from "../Types/BlogInterface";
 const BlogSchema = new Schema<BlogInterface>({
     type: String,
     title: String,
-    body: String
+    body: {
+        image: String,
+        text: String
+    }
 }, {
     timestamps: true
 });
